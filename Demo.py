@@ -1,3 +1,5 @@
+#  SPDX-FileCopyrightText: 2021 Jonas Mayer <jonas.mayer.dev@gmail.com>
+#  SPDX-License-Identifier: MIT
 from betterLogs4Python import BetterLogger
 
 # After getting a logger object with the logfile path,
