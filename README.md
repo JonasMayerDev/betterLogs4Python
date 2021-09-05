@@ -12,8 +12,12 @@ pip3 install betterLogs4Python
 For an executable Demo or test run [Demo.py](https://github.com/JonasMayerDev/betterLogs4Python/blob/main/Demo.py).
 
 ## How To Use
+1. Import the betterLogs4Python module:
+    ```python
+    from betterLogs4Python import BetterLogger
+    ```
 
-1. Create a BetterLogger object (maybe with parameters)
+2. Create a BetterLogger object (maybe with parameters)
     All Parameters are optional:
     
     Parameter          | Default       |Description
@@ -32,7 +36,7 @@ For an executable Demo or test run [Demo.py](https://github.com/JonasMayerDev/be
     logger = BetterLogger()
     ```
 
-2. Log to file by calling the log function with the logLevelNum parameter to define the type of the log message (default ist 20).
+3. Log to file by calling the log function with the logLevelNum parameter to define the type of the log message (default ist 20).
     The logLevelNum corresponds to the types as follows:
     
     Number	    |Type  
@@ -51,14 +55,16 @@ For an executable Demo or test run [Demo.py](https://github.com/JonasMayerDev/be
     logger.addLogLevelName("EXECUTION",25)
     logger.log("Hello this the new execution type!",logLevelNum=25)
     ```
-3. If using the runLimiter maybe call the finishRun function to finish the run.
+4. If using the runLimiter maybe call the finishRun function to finish the run.
     ```python
     logger.finishRun()
     ```
-4. Enjoy the Output :)
+5. Enjoy the Output :)
 
 ## Simple logger
 ```python
+from betterLogs4Python import BetterLogger
+
 # After getting a logger object with the logfile path,
 # you can log by calling the log function with optionally a logLevel that defines what type of log Message it is:
 #       10 : "DEBUG",
@@ -90,6 +96,8 @@ logger.log("Hello this the new execution type!",logLevelNum=25)
 ```
 ## More advanced logger
 ```python
+from betterLogs4Python import BetterLogger
+
 # Example for a Logger that logs only to the File "test.log". (Not the Console!)
 # The log includes Timestamps and a module name "testModule". 
 # The number of Lines in the Logfile is limited to 15 lines (oldest lines get removed when exceded!).
@@ -107,6 +115,8 @@ logger.log("This is a more Important message!",100)
 
 ## Run limited logger 
 ```python
+from betterLogs4Python import BetterLogger
+
 # Example for a Logger that logs to the File "test.log" and the Console.
 # The Log contains no Timestamp and no module name. 
 # The log file only stores 2 runs seperated by "-----" (older runs get deleted)
