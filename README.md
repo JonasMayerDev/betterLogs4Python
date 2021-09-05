@@ -9,7 +9,7 @@ For an easy installation install betterLogs4Python via pip:
 pip3 install betterLogs4Python
 ```
 
-For an executable Demo or test run [Demo.py](https://github.com/JonasMayerDev/betterLogs4Python/blob/main/LICENSE).
+For an executable Demo or test run [Demo.py](https://github.com/JonasMayerDev/betterLogs4Python/blob/main/Demo.py).
 
 ## How To Use
 
