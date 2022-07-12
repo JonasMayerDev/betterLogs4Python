@@ -12,6 +12,14 @@ class BetterLogger:
         50 : "FATAL"
     }
 
+    logLevelColorTable = {
+        10 : '',
+        20 : '',
+        30 : '\033[93m',
+        40 : '\033[91m',
+        50 : '\033[1m'
+    }
+
     def get_console_handler(self):
         console_handler = self.logging.StreamHandler(self.sys.stdout)
         console_handler.setFormatter(self.FORMATTER)
@@ -59,8 +67,10 @@ class BetterLogger:
         except KeyError:
             raise Exception("\nLog levelNumber not known!\nAdd it with addLogLevelName function of better Logger or choose an existing one: "+str(self.logLevelTable))
 
-    def addLogLevelName(self, name, number):
+    def addLogLevelName(self, name, number, color = ''):
         self.logLevelTable[number] = name
+        self.logLevelColorTable[number] = color
+        
     
     def checkRunNumber(self):
         runCount = 0
